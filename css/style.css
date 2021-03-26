@@ -1,3 +1,34 @@
 body {
     text-align: center;
 };
+
+a {
+    list-style-type: none;
+    color: black;
+}
+.list-group {
+    width: 180px;
+    height: auto;
+    position: absolute;
+}
+.tv {
+    background-image: url("https://raw.githubusercontent.com/duaren/watch-tv/master/img/TV4K.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 500px;
+    width: 1000px;
+    margin: auto;
+};
+.tv iframe {
+    padding-top: 5rem !important;
+}
+
+.play a {
+    border-radius: 26.5px;
+	background-color: #2196f3;
+	border: 1px solid #2196f3;
+	box-shadow: 0 16px 22px -17px #03153B;
+	color: #fff;
+	cursor: pointer;
+	font-size: 16px;
+};
