@@ -9,15 +9,14 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
  
-    <title>Watch-TV</title>
+    <title>Benin Web TV</title>
   </head>
   <body>
     <header id="header">
       <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top border-bottom shadow-sm">
         <a class="navbar-brand" href="#">
-          <img id="header-img" class="d-inline-block align-top" src="https://d29fhpw069ctt2.cloudfront.net/icon/image/49937/preview.svg"  width="60" height="30" alt="logo">
-          Tv Channel
-  
+          <img id="header-img" class="d-inline-block align-top" src="img/benin.png"  width="50" height="30" alt="logo">
+          <span class="vert">Benin</span> <span class="jaune">Web</span> <span class="rouge">TV</span> 
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -25,54 +24,57 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav">
             <li class="nav-item active">
-              <a class="nav-link" href="#">Accueil <span class="sr-only">(current)</span></a>
+              <a class="nav-link link-a" href="#">Accueil <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Guide Tv</a>
+              <a class="nav-link link-b" href="#">Guide Tv</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Direct</a>
+              <a class="nav-link link-c" href="#">Direct</a>
             </li>
           </ul>
         </div>
       </nav>
     </header>
 
-    <h1 class="p-3">Tv Channel</h1>
-    <div class="list-group">
-      <button type="button" class="list-group-item list-group-item-action">ORTB</button>
-      <button type="button" class="list-group-item list-group-item-action">BB24</button>
-      <button type="button" class="list-group-item list-group-item-action">LC2</button>
-      <button type="button" class="list-group-item list-group-item-action">Canal3</button>
-      <button type="button" class="list-group-item list-group-item-action">Golf Tv</button>
+    <div class="channel-list-container">
+      <div class="channel-list">
+        <button class="title list-group-item">Benin Web TV </button>
+        <button type="button" class="close-btn"><i class="fas fa-times"></i></button>
+        <button type="button" class="list-group-item list-group-item-action" onclick="show('Channel1');"> <img src="img/ORTB-logo.jpg" alt="ORTB"></button>
+        <button type="button" class="list-group-item list-group-item-action" onclick="show('Channel2');"> <img src="img/benin-business-24.jpg" alt="BB24"> </button>
+        <button type="button" class="list-group-item list-group-item-action" onclick="show('Channel3');"> <img src="img/lc2.jpg" alt="LC2"> </button>
+        <button type="button" class="list-group-item list-group-item-action" onclick="show('Channel4');"> <img src="img/Canal3.jpg" alt="Canal3"> </button>
+        <button type="button" class="list-group-item list-group-item-action" onclick="show('Channel5');"> <img src="img/golfe-tv-africa.jpg" alt="Golf TV"> </button> 
+      </div>
     </div>
-    <!--<div id="channel-list">
-      <li>
-        <a href="http://">ORTB</a>
-      </li>
-      <li>
-        <a href="http://">BB24</a>
-      </li>
-      <li>
-        <a href="http://">LC2</a>
-      </li>
-      <li>
-        <a href="http://">Canal3</a>
-      </li>
-      <li>
-        <a href="http://">Golf Tv</a>
-      </li>
-    </div>-->
+    <button class="floating-btn ">Chaines <i class="fas fa-play"></i></button>
+    
+    <!-- -->
     <div class="tv">
+      <div id="Channel1">
         <iframe class="pt-2" frameborder="0" allowfullscreen="" width="810" height="465" src="https://player.infomaniak.com?channel=69891&amp;player=10535"></iframe>
-        </div>
-    <div class="play">
-      <a href="http://">play</a>
-      <button ">Play <i class="fas fa-play"></i></button>
+      </div>
+      
+      <div id="Channel2" style="display : none; ">
+        <iframe class="pt-2"  frameborder="0" allowfullscreen="" width="810" height="465" src="https://player.infomaniak.com?channel=70625&amp;player=10790"></iframe>
+      </div>
+      <div id="Channel3" style="display: none;">
+        <img class="pt-2" src="/img/tv_noise.gif" width="810" height="465"/>
+      </div>
+      <div id="Channel4" style="display: none;">
+        <iframe class="pt-2"  frameborder="0" scrolling="no" allowfullscreen="allowfullscreen" width="810" height="465" src="https://www.creacast.com/play.php?su=bluediamond" allow="autoplay"></iframe>
+      </div>
+      <div id="Channel5" style="display: none;">
+        <iframe class="pt-2" width="810" height="465" src="https://www.youtube.com/embed/5peWeR8RqpY?enablejsapi=1&amp;feature=oembed&amp;wmode=opaque&amp;vq=hd720&amp;autoplay=1&amp;&amp;" frameborder="0" allowfullscreen="" allow="autoplay" id="widget2"></iframe>
+      </div>
     </div>
+
     <footer>
       © Copyright 2021. Made with &#x1F9E1; By <a href="https://github.com/duaren" target=blank class="">@duaren</a>
     </footer>
+
+    <script src="js/main.js"></script>
 
     <!-- Optional JavaScript -->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
@@ -80,4 +82,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/c950b7a1cb.js" crossorigin="anonymous"></script>
   </body>
+  <script type="text/javascript">
+  
+ </script>
 </html>
