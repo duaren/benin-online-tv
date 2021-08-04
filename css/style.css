@@ -10,7 +10,6 @@ nav img{
 }
 
 .navbar-brand {
-	background-color: ;
 	font-family: 'Oxygen', sans-serif;
 	font-weight: bold ;
 }
@@ -139,4 +138,31 @@ nav img{
 
 footer   {
 	padding: 50px 20px 20px 20px;
+}
+
+/* Media Queries  */
+@media (max-width: 320px) {
+	iframe {
+		width: 280px ;
+		height: 160px;
+	}
+	.tv {
+		width: 300px;
+		height: 180px;
+	}
+}
+@media (max-width: 480px) {
+	iframe {
+		width: 440px ;
+		height: 240px;
+	}
+	.tv {
+		width: 460px;
+		height: 260px;
+		background-image: none;
+	}
+}
+
+@media (max-width: 768px) {
+	
 }
