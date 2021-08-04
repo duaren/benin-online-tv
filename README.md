@@ -1,2 +1,2 @@
 # watch-tv
-Take a minute and watch TV
+Watch Benin TNT Channels Online
